@@ -51,10 +51,10 @@ steps:
   inputs:
     command: 'custom'
     custom: 'ef'
-    arguments: 'migrations script --idempotent --no-build --configuration Release --output ${{env.DOTNET_ROOT}}/sql/sql-script.sql --context DeploymentAppWithDb.Data.ProjectContext --project ${{ github.workspace }}/DeploymentAppWithDb/DeploymentAppWithDb.csproj'
+    arguments: 'migrations script --idempotent --project $(Build.SourcesDirectory)\Data.csproj --output $(System.ArtifactsDirectory)/script.sql'
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/sql/sql-script.sql'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/sql-script.sql'
     ArtifactName: 'drop'
     publishLocation: 'Container'
