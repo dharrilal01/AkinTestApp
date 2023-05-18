@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+DeY8YvBI0O5IPxusGjXnwAAAAACAAAAAAAQZgAAAAEAACAAAACp1D3COc4q0bDI96mcVV1k27D/Z4Zd2F8fBF/qQ4qBXgAAAAAOgAAAAAIAACAAAACqJIhdeGVnQxaM8xL7noZ+XyD3AWXJWg19ozVaa2KNOIAAAAAMr9kFv4Yx+psNo08uDvmglgcMYKvbNWqh7WYY1JYonJZXNb7b7H1EAJao0AjFfafroov2R89euagVtdMCP+B9Z9LY7bJylOly75OVmKpBNa4UEqGTcHCbDdDFNXQxTycPl0J71suT2m0YPfVuHUcDEDXToGT3Mgw4FH/TccHHS0AAAAAZUMkzYgV9PB6sfu6ZA5y+iBD5eNYK+4wNb5ot9Ko0SzUfwXsFxs1Mg8CxQTr6eCTEB3Skwg5G9Cq4kKi8/VSY</EncryptedPassword>
+    <History>True|2022-11-14T19:41:00.5268972Z;True|2022-11-14T14:38:40.3971072-05:00;True|2022-11-14T14:36:08.3694287-05:00;True|2022-11-14T14:26:18.8289352-05:00;True|2022-11-14T14:24:29.9868699-05:00;True|2022-11-14T13:41:12.4204630-05:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ProjectContext">
+      <Value>Data Source=tcp:webappdbtestnm1-server.database.windows.net,1433%3bInitial Catalog=webappdbtestnm1-database%3bUser Id=webappdbtestnm1-server-admin%40webappdbtestnm1-server%3bPassword=50Diamond%24</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
