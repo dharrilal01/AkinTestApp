@@ -51,7 +51,7 @@ steps:
   inputs:
     command: 'custom'
     custom: 'ef'
-    arguments: 'migrations script --idempotent --no-build --configuration Release --output $(System.ArtifactsDirectory)/sql/sql-script.sql --context DeploymentAppWithDb.Data.ProjectContext --project ${{ github.workspace }}/DeploymentAppWithDb/DeploymentAppWithDb.csproj'
+    arguments: 'migrations script --idempotent --no-build --configuration Release --output $(System.ArtifactsDirectory)/sql/sql-script.sql --context DeploymentAppWithDb.Data.ProjectContext --project $(Build.SourcesDirectory)/DeploymentAppWithDb/DeploymentAppWithDb.csproj'
 
 - task: PublishBuildArtifacts@1
   inputs:
