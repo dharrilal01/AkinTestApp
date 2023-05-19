@@ -39,6 +39,7 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
+#Install Entity Framewowrk
 - task: DotNetCoreCLI@2
   displayName: 'Install Entitiy Framework Tool'
   inputs:
@@ -46,12 +47,13 @@ steps:
     custom: 'tool'
     arguments: 'install --global dotnet-ef'
 
+#Generate Migration script
 - task: DotNetCoreCLI@2
   displayName: 'Generatate SQL Migration Script'
   inputs:
     command: 'custom'
     custom: 'ef'
-    arguments: 'migrations script --idempotent --no-build --configuration Release --output $(System.ArtifactsDirectory)/sql/sql-script.sql --context DeploymentAppWithDb.Data.ProjectContext --project $(Build.SourcesDirectory)/DeploymentAppWithDb/DeploymentAppWithDb.csproj'
+    arguments: 'migrations script --idempotent --configuration Release --output $(Build.ArtifactsDirectory)/sql/sql-script.sql --context DeploymentAppWithDb.Data.ProjectContext --project $(Build.SourcesDirectory)/DeploymentAppWithDb/DeploymentAppWithDb.csproj'
 
 - task: PublishBuildArtifacts@1
   inputs:
