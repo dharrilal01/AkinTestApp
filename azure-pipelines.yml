@@ -36,7 +36,7 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
+    ArtifactName: 'App Artifacts'
     publishLocation: 'Container'
 
 #Install Entity Framewowrk
@@ -54,9 +54,8 @@ steps:
     command: 'custom'
     custom: 'ef'
     arguments: 'migrations script --idempotent --configuration Release --output $(Build.ArtifactsDirectory)/sql/sql-script.sql --context DeploymentAppWithDb.Data.ProjectContext --project $(Build.SourcesDirectory)/DeploymentAppWithDb/DeploymentAppWithDb.csproj'
-
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/sql/sql-script.sql'
-    ArtifactName: 'drop'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)/sql'
+    ArtifactName: 'Data Migration'
     publishLocation: 'Container'
